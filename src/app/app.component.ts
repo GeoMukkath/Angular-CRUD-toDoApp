@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import toDoItem  from '../app/todo-item.model'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo';
+  todos: toDoItem[] = [];
+
+  ngOnInit(): void {
+
+  }
+
+  onnewToDo(newtodo: string){
+    this.todos.push({
+      title: newtodo,
+      completed: false
+    });
+
+  }
 }
