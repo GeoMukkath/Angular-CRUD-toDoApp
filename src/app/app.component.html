@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container">
   <app-todo-form (onnewToDo)= "onnewToDo($event)"></app-todo-form>
-  <app-todo-list [todos] = "todos"></app-todo-list>
+  <app-todo-list [todos] = "todos" (onRemoveToDo) ="onRemoveToDo($event)"></app-todo-list>
   <router-outlet></router-outlet>
 </div>
 

@@ -21,4 +21,8 @@ export class AppComponent {
     });
 
   }
+
+  onRemoveToDo(index: number){
+    this.todos.splice(index, 1);
+  }
 }

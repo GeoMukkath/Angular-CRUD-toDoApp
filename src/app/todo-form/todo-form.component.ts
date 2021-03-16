@@ -1,3 +1,4 @@
+import { formatCurrency } from '@angular/common';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -15,5 +16,6 @@ export class TodoFormComponent implements OnInit {
 
   onSubmit(){
     this.onnewToDo.emit(this.newTodo);
+    this.newTodo = '';
   }
 }
